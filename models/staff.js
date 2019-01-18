@@ -34,7 +34,7 @@ StaffSchema.statics.authenticate = function(email, password, callback) {
         if (error) {
           return callback(error);
         } else if ( !staff ) {
-          var err = new Error('User not found.');
+          const err = new Error('User not found.');
           err.status = 401;
           return callback(err);
         }
